@@ -45,8 +45,9 @@ class _MyAppState extends State<MyApp> {
   Future<AtClientPreference> futurePreference = loadAtClientPreference();
   AtClientPreference? atClientPreference;
 
-  final AtSignLogger _logger = AtSignLogger(AtEnv.appNamespace);
 
+  final AtSignLogger _logger = AtSignLogger(AtEnv.appNamespace);
+  
   bool isFirstLoad = false;
   @override
   Widget build(BuildContext context) {
