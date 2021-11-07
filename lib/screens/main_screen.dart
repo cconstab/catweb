@@ -2,6 +2,7 @@ import 'dart:io';
 
 import "package:collection/collection.dart";
 import 'package:flutter/material.dart';
+import 'package:hamlibui/services/update_atsign.dart';
 import 'package:mdi/mdi.dart';
 import 'package:at_client_mobile/at_client_mobile.dart';
 import 'package:hamlibui/Theme/ui_theme.dart';
@@ -172,6 +173,7 @@ class _MainScreenState extends State<MainScreen> {
                           } else {
                             activeradios.remove(hamradio.radioUuid);
                             resetRadioDisplay(hamradio);
+                            qrtAtsign(hamradio);
                           }
                         });
                       },
