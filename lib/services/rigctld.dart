@@ -43,6 +43,7 @@ void rigCTLd(HamRadio hamradio) async {
           mmode = mmode.replaceFirst(RegExp('r*-Passband:'), '');
           // If no Modulation mode give then
           // Likley Digital or Dstar
+          // At least on Icom
           if (mmode == '') {
             mmode = 'DIG';
           }
