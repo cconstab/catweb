@@ -1,5 +1,5 @@
 import 'package:at_commons/at_commons.dart';
-
+import 'package:hamlibui/main.dart';
 import 'package:at_client_mobile/at_client_mobile.dart';
 import 'package:hamlibui/services/formats.dart';
 import 'package:hamlibui/models/radio_model.dart';
@@ -13,6 +13,13 @@ updateAtsign(HamRadio hamradio) async {
   atClient = atClientManager.atClient;
   currentAtsign = atClient.getCurrentAtSign();
   var currentAtsignNoAt = currentAtsign!.replaceAll('@', '');
+  Future<AtClientPreference> futurePreference = loadAtClientPreference();
+
+  var preference = await futurePreference;
+
+  print('PPPPPPref' + preference.namespace.toString());
+
+  atClientManager.atClient.setPreferences(preference);
 
   String radiourl =
       'https://wavi.ng/api?atp=${hamradio.radioName}.$currentAtsignNoAt@ai6bh&html=true';
@@ -96,9 +103,17 @@ qrtAtsign(HamRadio hamradio) async {
   atClientManager = AtClientManager.getInstance();
   atClient = atClientManager.atClient;
   currentAtsign = atClient.getCurrentAtSign();
-  var currentAtsignNoAt = currentAtsign!.replaceAll('@', '');
+
+  AtClientPreference? atClientPreference;
+  Future<AtClientPreference> futurePreference = loadAtClientPreference();
+
+  var preference = await futurePreference;
+  print('pref:::' + preference.namespace.toString());
+
+  atClientManager.atClient.setPreferences(preference);
+
   String qrt =
-      '<!DOCTYPE html> <html> <head> <meta http-equiv="refresh" content="5" /><style> h1 {text-align: center;} </style> </head><body> <h1>${currentAtsign.toUpperCase()} using ${hamradio.radioName} QRT for now </h1> </body> </html>';
+      '<!DOCTYPE html> <html> <head> <meta http-equiv="refresh" content="5" /><style> h1 {text-align: center;} </style> </head><body> <h1>${currentAtsign!.toUpperCase()} using ${hamradio.radioName} QRT for now </h1> </body> </html>';
   // Save radio Frequency and Mode
   var metaData = Metadata()
     ..isPublic = true
@@ -115,9 +130,10 @@ qrtAtsign(HamRadio hamradio) async {
     ..sharedWith = null
     ..metadata = metaData;
 
-  print('Updating: ' + key.toString() + '  :::  ' + qrt + ' Mhz');
-  //await atClient.delete(key);
+  print('Updating: ' + key.toString() + '  :::  ' + qrt);
+  await atClient.delete(key);
   await atClient.put(key, qrt);
+
   atClientManager.syncService.sync();
   var test = await atClient.get(key);
   if (test.value == null) {
@@ -125,5 +141,4 @@ qrtAtsign(HamRadio hamradio) async {
   } else {
     print('RADIO VALUE::: ' + test.value);
   }
-
 }
