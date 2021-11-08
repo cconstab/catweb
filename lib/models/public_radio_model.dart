@@ -1,4 +1,4 @@
-class HamRadio {
+class PublicHamRadio {
   String radioName;
   String radioUuid;
   String? vfoaFrequency;
@@ -14,7 +14,7 @@ class HamRadio {
   String? vfobModulationModeLast;
   String? vfobOperatingModeLast;
 
-  HamRadio({
+  PublicHamRadio({
     required this.radioName,
     required this.radioUuid,
     this.vfoaFrequency = '0000000000',
@@ -31,7 +31,7 @@ class HamRadio {
     this.vfobOperatingModeLast = '---',
   });
 
-  HamRadio.fromJson(Map<String, dynamic> json)
+  PublicHamRadio.fromJson(Map<String, dynamic> json)
       : radioName = json['radioName'],
         radioUuid = json['radioUuid'],
         vfoaFrequency = json['vfoaFrequency'],

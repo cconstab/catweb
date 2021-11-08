@@ -3,6 +3,7 @@ import 'package:hamlibui/main.dart';
 import 'package:at_client_mobile/at_client_mobile.dart';
 import 'package:hamlibui/services/formats.dart';
 import 'package:hamlibui/models/radio_model.dart';
+import 'package:hamlibui/models/public_radio_model.dart';
 
 updateAtsign(HamRadio hamradio) async {
   String? currentAtsign;
@@ -20,6 +21,11 @@ updateAtsign(HamRadio hamradio) async {
   print('PPPPPPref' + preference.namespace.toString());
 
   atClientManager.atClient.setPreferences(preference);
+
+  PublicHamRadio publichamradio =
+      PublicHamRadio.fromJson(hamradio.toJsonFull());
+
+  print(publichamradio.toJson());
 
   String radiourl =
       'https://wavi.ng/api?atp=${hamradio.radioName}.$currentAtsignNoAt@ai6bh&html=true';
@@ -57,6 +63,34 @@ updateAtsign(HamRadio hamradio) async {
   } else {
     print('RADIO VALUE::: ' + test.value);
   }
+
+  metaData = Metadata()
+    ..isPublic = true
+    ..isEncrypted = false
+    ..namespaceAware = true
+    // // one minute
+    // ..ttl = 60000 ;
+    // One Hour
+    ..ttl = 3600000;
+
+   key = AtKey()
+    ..key = 'public.'+hamradio.radioName
+    ..sharedBy = currentAtsign
+    ..sharedWith = null
+    ..metadata = metaData;
+
+  print('Updating: ' + key.toString() + '  :::  ' + publichamradio.toJson().toString());
+  //await atClient.delete(key);
+  await atClient.put(key, publichamradio.toJson().toString());
+  atClientManager.syncService.sync();
+   test = await atClient.get(key);
+  if (test.value == null) {
+    print('NULL FOUND');
+  } else {
+    print('JSON VALUE::: ' + test.value);
+  }
+
+
 
   key = AtKey()
     ..key = hamradio.radioName
