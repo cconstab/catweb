@@ -47,7 +47,7 @@ updateAtsign(HamRadio hamradio) async {
     ..sharedWith = null
     ..metadata = metaData;
 
-  print('Updating: ' + key.toString() + '  :::  ' + message);
+  print('Updating: ' + key.toString() + '  :::  ' + message + ' Mhz');
   //await atClient.delete(key);
   await atClient.put(key, message);
   atClientManager.syncService.sync();
