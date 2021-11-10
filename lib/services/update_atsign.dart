@@ -56,7 +56,7 @@ updateAtsign(HamRadio hamradio) async {
   print('Updating: ' + key.toString() + '  :::  ' + message + ' Mhz');
   //await atClient.delete(key);
   await atClient.put(key, message);
-  atClientManager.syncService.sync();
+  //atClientManager.syncService.sync();
   var test = await atClient.get(key);
   if (test.value == null) {
     print('NULL FOUND');
@@ -82,7 +82,7 @@ updateAtsign(HamRadio hamradio) async {
   print('Updating: ' + key.toString() + '  :::  ' + publichamradio.toJson().toString());
   //await atClient.delete(key);
   await atClient.put(key, publichamradio.toJson().toString());
-  atClientManager.syncService.sync();
+  //atClientManager.syncService.sync();
    test = await atClient.get(key);
   if (test.value == null) {
     print('NULL FOUND');
@@ -119,7 +119,7 @@ updateAtsign(HamRadio hamradio) async {
   print('Putting this Key::' + key.toString());
   print('+++++++++++++++++++++++++++++++');
 
-  atClientManager.syncService.sync();
+  //atClientManager.syncService.sync();
   test = await atClient.get(key);
   if (test.value == null) {
     print('NULL FOUND');
