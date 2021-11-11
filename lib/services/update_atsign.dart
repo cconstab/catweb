@@ -1,4 +1,6 @@
 import 'package:at_commons/at_commons.dart';
+import 'dart:convert';
+
 import 'package:hamlibui/main.dart';
 import 'package:at_client_mobile/at_client_mobile.dart';
 import 'package:hamlibui/services/formats.dart';
@@ -79,9 +81,9 @@ updateAtsign(HamRadio hamradio) async {
     ..sharedWith = null
     ..metadata = metaData;
 
-  print('Updating: ' + key.toString() + '  :::  ' + publichamradio.toJson().toString());
+  print('Updating: ' + key.toString() + '  :::  ' + jsonEncode(publichamradio));
   //await atClient.delete(key);
-  await atClient.put(key, publichamradio.toJson().toString());
+  await atClient.put(key,jsonEncode(publichamradio) );
   //atClientManager.syncService.sync();
    test = await atClient.get(key);
   if (test.value == null) {

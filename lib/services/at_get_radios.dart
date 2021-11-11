@@ -34,7 +34,7 @@ Future<List<HamRadio>> getHamradio(List<HamRadio> radios) async {
         ..sharedWith = currentAtsign;
       var value = await atClient.get(key);
       String valueString = value.value;
-
+      print(value.value);
       var radioMap = jsonDecode(valueString);
       var newradio = HamRadio.fromJsonBasic(radioMap);
       newradios.add(newradio);
