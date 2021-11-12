@@ -73,10 +73,10 @@ Future<List<HamRadio>> getHamradio(List<HamRadio> radios) async {
 
       radioUuids.forEach((key, value) {
         if (newRadioUuids.containsValue(value)) {
-          print('NOT Removing :' + radios[key].radioName.toString());
+          print('NOT Removing :' + radios[key].radioName.toString() + ' key:' + key);
         } else {
           radiosToRemove.add(key);
-          print('Removing :' + radios[key].radioName.toString());
+          print('Removing :' + radios[key].radioName.toString() + ' key:' + key);
         }
       });
       for (var key in radiosToRemove) {
