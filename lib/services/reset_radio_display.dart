@@ -33,34 +33,5 @@ resetRadioDisplay(HamRadio hamradio) async {
   hamradio.vfobFrequency = '0000000000';
   hamradio.vfobModulationMode = '---';
 
-  PublicHamRadio publichamradio =
-      PublicHamRadio.fromJson(hamradio.toJsonFull());
-  
-var metaData = Metadata()
-    ..isPublic = true
-    ..isEncrypted = false
-    ..namespaceAware = true
-    // // one minute
-    // ..ttl = 60000 ;
-    // One Hour
-    ..ttl = 3600000;
-
-  var key = AtKey()
-    ..key = 'public.'+hamradio.radioName
-    ..sharedBy = currentAtsign
-    ..sharedWith = null
-    ..metadata = metaData;
-
-  print('Updating: ' + key.toString() + '  :::  ' + publichamradio.toJson().toString());
-  //await atClient.delete(key);
-  await atClient.put(key, publichamradio.toJson().toString());
-  atClientManager.syncService.sync();
-  var test = await atClient.get(key);
-  if (test.value == null) {
-    print('NULL FOUND');
-  } else {
-    print('JSON VALUE::: ' + test.value);
-  }
-
 
 }
