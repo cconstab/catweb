@@ -82,7 +82,7 @@ class _MainScreenState extends State<MainScreen> {
             titleTextStyle: const TextStyle(
                 fontFamily: 'LED', fontSize: 36, letterSpacing: 5),
             title: Text(
-              '$currentAtsign UI',
+              '$currentAtsign CATWEB',
             ),
             actions: [
               PopupMenuButton<String>(
