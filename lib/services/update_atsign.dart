@@ -30,9 +30,11 @@ updateAtsign(HamRadio hamradio) async {
   print(publichamradio.toJson());
 
   String radiourl =
-      'https://wavi.ng/api?atp=${hamradio.radioName}.$currentAtsignNoAt@ai6bh&html=true';
+      // 'https://wavi.ng/api?atp=${hamradio.radioName}.$currentAtsignNoAt@ai6bh&html=true';
+      //'http://wavi.shaduf.com:8080/?atsign=$currentAtsignNoAt&radio=${hamradio.radioName}';
+      'https://cconstab.github.io/cateyes/?atsign=${currentAtsignNoAt.toLowerCase()}&radio=${hamradio.radioName.toLowerCase()}';
   String wavi =
-      '''{"label":"Listening on ${hamradio.radioName}","category":"DETAILS","type":"Text","value":"<iframe src=\\"$radiourl\\" sandbox=\\"allow-scripts\\"  style=\\"height:75px;width:1100px\\" title=\\"Iframe Example\\"></iframe>","valueLabel":""}''';
+      '''{"label":"Listening on ${hamradio.radioName}","category":"DETAILS","type":"Text","value":"<iframe src=\\"$radiourl\\"  style=\\"height:90px;width:900px\\"</iframe>","valueLabel":""}''';
 
   String message =
       '<!DOCTYPE html> <html> <head> <meta http-equiv="refresh" content="5" /><style> h1 {text-align: center;} </style> </head><body> <h1>${currentAtsign.toUpperCase()} using ${hamradio.radioName} listening on ${frequencyFormat(hamradio.vfoaFrequency.toString()).padRight(10)} ${hamradio.vfoaModulationMode} </h1> </body> </html>';
@@ -75,24 +77,22 @@ updateAtsign(HamRadio hamradio) async {
     // One Hour
     ..ttl = 3600000;
 
-   key = AtKey()
-    ..key = 'public.'+hamradio.radioName
+  key = AtKey()
+    ..key = 'public.' + hamradio.radioName
     ..sharedBy = currentAtsign
     ..sharedWith = null
     ..metadata = metaData;
 
   print('Updating: ' + key.toString() + '  :::  ' + jsonEncode(publichamradio));
   //await atClient.delete(key);
-  await atClient.put(key,jsonEncode(publichamradio) );
+  await atClient.put(key, jsonEncode(publichamradio));
   //atClientManager.syncService.sync();
-   test = await atClient.get(key);
+  test = await atClient.get(key);
   if (test.value == null) {
     print('NULL FOUND');
   } else {
     print('JSON VALUE::: ' + test.value);
   }
-
-
 
   key = AtKey()
     ..key = hamradio.radioName
