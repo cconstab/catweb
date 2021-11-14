@@ -31,6 +31,8 @@ dependencies:
   auto_size_text: ^3.0.0-nullsafety.0
   font_awesome_flutter: ^9.1.0
   mdi: ^5.0.0-nullsafety.0
+  at_persistence_secondary_server: 3.0.5
+  at_persistence_spec: 2.0.1
   flutter:
     sdk: flutter
 
