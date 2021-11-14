@@ -1,8 +1,10 @@
 import 'package:at_commons/at_commons.dart';
+import 'dart:convert';
+
 import 'package:hamlibui/main.dart';
 import 'package:at_client_mobile/at_client_mobile.dart';
-import 'package:hamlibui/services/formats.dart';
 import 'package:hamlibui/models/radio_model.dart';
+import 'package:hamlibui/models/public_radio_model.dart';
 
 updateAtsign(HamRadio hamradio) async {
   String? currentAtsign;
@@ -21,17 +23,16 @@ updateAtsign(HamRadio hamradio) async {
 
   atClientManager.atClient.setPreferences(preference);
 
+  PublicHamRadio publichamradio =
+      PublicHamRadio.fromJson(hamradio.toJsonFull());
+
+  print(publichamradio.toJson());
+
   String radiourl =
-      'https://wavi.ng/api?atp=${hamradio.radioName}.$currentAtsignNoAt@ai6bh&html=true';
+      'https://cconstab.github.io/cateyes/?atsign=${currentAtsignNoAt.toLowerCase()}&radio=${hamradio.radioName.toLowerCase()}';
   String wavi =
-      '''{"label":"Listening on ${hamradio.radioName}","category":"DETAILS","type":"Text","value":"<iframe src=\\"$radiourl\\" sandbox=\\"allow-scripts\\"  style=\\"height:75px;width:1100px\\" title=\\"Iframe Example\\"></iframe>","valueLabel":""}''';
+      '''{"label":"Listening on ${hamradio.radioName}","category":"DETAILS","type":"Text","value":"<iframe src=\\"$radiourl\\"  style=\\"height:90px;width:900px\\"</iframe>","valueLabel":""}''';
 
-  String message =
-      '<!DOCTYPE html> <html> <head> <meta http-equiv="refresh" content="5" /><style> h1 {text-align: center;} </style> </head><body> <h1>${currentAtsign.toUpperCase()} using ${hamradio.radioName} listening on ${frequencyFormat(hamradio.vfoaFrequency.toString()).padRight(10)} ${hamradio.vfoaModulationMode} </h1> </body> </html>';
-
-  String qrt =
-      '<!DOCTYPE html> <html> <head> <meta http-equiv="refresh" content="5" /><style> h1 {text-align: center;} </style> </head><body> <h1>${currentAtsign.toUpperCase()} using ${hamradio.radioName} QRT for now </h1> </body> </html>';
-  // Save radio Frequency and Mode
   var metaData = Metadata()
     ..isPublic = true
     ..isEncrypted = false
@@ -42,20 +43,20 @@ updateAtsign(HamRadio hamradio) async {
     ..ttl = 3600000;
 
   var key = AtKey()
-    ..key = hamradio.radioName
+    ..key = 'public.' + hamradio.radioName
     ..sharedBy = currentAtsign
     ..sharedWith = null
     ..metadata = metaData;
 
-  print('Updating: ' + key.toString() + '  :::  ' + message + ' Mhz');
+  print('Updating: ' + key.toString() + '  :::  ' + jsonEncode(publichamradio));
   //await atClient.delete(key);
-  await atClient.put(key, message);
-  atClientManager.syncService.sync();
+  await atClient.put(key, jsonEncode(publichamradio));
+  //atClientManager.syncService.sync();
   var test = await atClient.get(key);
   if (test.value == null) {
     print('NULL FOUND');
   } else {
-    print('RADIO VALUE::: ' + test.value);
+    print('JSON VALUE::: ' + test.value);
   }
 
   key = AtKey()
@@ -85,7 +86,7 @@ updateAtsign(HamRadio hamradio) async {
   print('Putting this Key::' + key.toString());
   print('+++++++++++++++++++++++++++++++');
 
-  atClientManager.syncService.sync();
+  //atClientManager.syncService.sync();
   test = await atClient.get(key);
   if (test.value == null) {
     print('NULL FOUND');
@@ -108,13 +109,16 @@ qrtAtsign(HamRadio hamradio) async {
   Future<AtClientPreference> futurePreference = loadAtClientPreference();
 
   var preference = await futurePreference;
-  print('pref:::' + preference.namespace.toString());
+  print('QRT pref:::' + preference.namespace.toString());
 
   atClientManager.atClient.setPreferences(preference);
 
-  String qrt =
-      '<!DOCTYPE html> <html> <head> <meta http-equiv="refresh" content="5" /><style> h1 {text-align: center;} </style> </head><body> <h1>${currentAtsign!.toUpperCase()} using ${hamradio.radioName} QRT for now </h1> </body> </html>';
-  // Save radio Frequency and Mode
+  PublicHamRadio publichamradio =
+      PublicHamRadio.fromJson(hamradio.toJsonFull());
+
+  publichamradio.vfoaFrequency = '8888888888';
+  publichamradio.vfoaModulationMode = 'QRT';
+
   var metaData = Metadata()
     ..isPublic = true
     ..isEncrypted = false
@@ -125,20 +129,19 @@ qrtAtsign(HamRadio hamradio) async {
     ..ttl = 3600000;
 
   var key = AtKey()
-    ..key = hamradio.radioName
+    ..key = 'public.' + hamradio.radioName
     ..sharedBy = currentAtsign
     ..sharedWith = null
     ..metadata = metaData;
 
-  print('Updating: ' + key.toString() + '  :::  ' + qrt);
-  await atClient.delete(key);
-  await atClient.put(key, qrt);
-
-  atClientManager.syncService.sync();
+  print('Updating QRT: ' + key.toString() + '  :::  ' + jsonEncode(publichamradio));
+  //await atClient.delete(key);
+  await atClient.put(key, jsonEncode(publichamradio));
+  //atClientManager.syncService.sync();
   var test = await atClient.get(key);
   if (test.value == null) {
-    print('NULL FOUND');
+    print('QRT NULL FOUND');
   } else {
-    print('RADIO VALUE::: ' + test.value);
+    print('QRT JSON VALUE::: ' + test.value);
   }
 }

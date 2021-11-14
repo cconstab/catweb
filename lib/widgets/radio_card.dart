@@ -70,15 +70,16 @@ class _RadioCardState extends State<RadioCard> {
                           letterSpacing: 5,
                           color: Colors.white)),
               // ignore: prefer_const_constructors
-              Text(
-                  "VFO B ${frequencyFormat(radio.vfobFrequency.toString()).padRight(10)} ${radio.vfobModulationMode.toString()}",
-                  style:
-                      // ignore: prefer_const_constructors
-                      TextStyle(
-                          fontFamily: 'LED',
-                          fontSize: 30,
-                          letterSpacing: 5,
-                          color: Colors.white)),
+              // VFO B when we need it
+              // Text(
+              //     "VFO B ${frequencyFormat(radio.vfobFrequency.toString()).padRight(10)} ${radio.vfobModulationMode.toString()}",
+              //     style:
+              //         // ignore: prefer_const_constructors
+              //         TextStyle(
+              //             fontFamily: 'LED',
+              //             fontSize: 30,
+              //             letterSpacing: 5,
+              //             color: Colors.white)),
             ],
           ),
           children: <Widget>[
