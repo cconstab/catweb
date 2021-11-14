@@ -81,8 +81,9 @@ class _MainScreenState extends State<MainScreen> {
           appBar: AppBar(
             titleTextStyle: const TextStyle(
                 fontFamily: 'LED', fontSize: 36, letterSpacing: 5),
-            title: Text(
-              '$currentAtsign CATWEB',
+            title: FittedBox (
+              fit: BoxFit.fitWidth,
+             child: Text('$currentAtsign CATWEB')
             ),
             actions: [
               PopupMenuButton<String>(

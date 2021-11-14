@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: const [
           Text(
-            "HAMLIB-WEB UI",
+            "CATWEB",
             style:  TextStyle(fontFamily: 'LED', fontSize: 38, letterSpacing: 5, color: UItheme.viridianGreen, fontWeight: FontWeight.bold),
 
           ),
