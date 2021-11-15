@@ -86,14 +86,14 @@ packages:
     source: hosted
     version: "3.0.4"
   at_persistence_secondary_server:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: at_persistence_secondary_server
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.5"
   at_persistence_spec:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: at_persistence_spec
       url: "https://pub.dartlang.org"
