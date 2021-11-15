@@ -30,8 +30,16 @@ updateAtsign(HamRadio hamradio) async {
 
   String radiourl =
       'https://cconstab.github.io/cateyes/?atsign=${currentAtsignNoAt.toLowerCase()}&radio=${hamradio.radioName.toLowerCase()}';
-  String wavi =
-      '''{"label":"Listening on ${hamradio.radioName}","category":"DETAILS","type":"Text","value":"<iframe src=\\"$radiourl\\"  style=\\"height:90px;width:900px\\"</iframe>","valueLabel":""}''';
+
+  String html = '''<!DOCTYPE html><html><head><meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1\\"><style>.container {  position: relative;  width: 100%;  overflow: hidden;  padding-top: 56.25%;} .responsive-iframe {  position: absolute;  top: 0;  left: 0;  bottom: 0;  right: 0;  width: 100%;  height: 100%;  border: none;</style></head><body><div class=\\"container\\">  <iframe class=\\"responsive-iframe\\" src=\\"$radiourl\\"></iframe></div></body</html>  ''';
+
+
+  // String wavi =
+  //     '''{"label":"Listening on ${hamradio.radioName}","category":"DETAILS","type":"Text","value":"<iframe src=\\"$radiourl\\"  style=\\"height:90px;width:900px\\"</iframe>","valueLabel":""}''';
+
+ String wavi =
+      '''{"label":"Listening on ${hamradio.radioName}","category":"DETAILS","type":"Text","value":"$html","valueLabel":""}''';
+
 
   var metaData = Metadata()
     ..isPublic = true
@@ -134,7 +142,10 @@ qrtAtsign(HamRadio hamradio) async {
     ..sharedWith = null
     ..metadata = metaData;
 
-  print('Updating QRT: ' + key.toString() + '  :::  ' + jsonEncode(publichamradio));
+  print('Updating QRT: ' +
+      key.toString() +
+      '  :::  ' +
+      jsonEncode(publichamradio));
   //await atClient.delete(key);
   await atClient.put(key, jsonEncode(publichamradio));
   //atClientManager.syncService.sync();
