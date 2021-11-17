@@ -28,11 +28,12 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   google_fonts: ^2.1.0
+  biometric_storage: ^2.0.3
   auto_size_text: ^3.0.0-nullsafety.0
   font_awesome_flutter: ^9.1.0
   mdi: ^5.0.0-nullsafety.0
-  # at_persistence_secondary_server: 3.0.5
-  # at_persistence_spec: 2.0.1
+  at_persistence_secondary_server: 3.0.5
+  at_persistence_spec: 2.0.1
   flutter:
     sdk: flutter
 
@@ -46,17 +47,17 @@ dependencies:
   expansion_tile_card: ^2.0.0
 
 # For Windowes testing
-  # dependency_overrides:  
-#   at_onboarding_flutter:
-#     git:
-#       url: https://github.com/atsign-foundation/at_widgets.git
-#       path: at_onboarding_flutter
-#       ref: desktop/development
-#   at_client_mobile:
-#     git:
-#       url: https://github.com/atsign-foundation/at_client_sdk.git
-#       path: at_client_mobile
-#       ref: desktop-compatible
+dependency_overrides:  
+  at_onboarding_flutter:
+    git:
+      url: https://github.com/atsign-foundation/at_widgets.git
+      path: at_onboarding_flutter
+      ref: desktop/development
+  at_client_mobile:
+    git:
+      url: https://github.com/atsign-foundation/at_client_sdk.git
+      path: at_client_mobile
+      ref: desktop-compatible
 
 dev_dependencies:
   flutter_test:
