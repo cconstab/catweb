@@ -9,10 +9,10 @@ import 'package:path_provider/path_provider.dart'
     show getApplicationSupportDirectory;
 import 'package:at_app_flutter/at_app_flutter.dart' show AtEnv;
 
-import 'package:hamlibui/screens/main_screen.dart';
-import 'package:hamlibui/screens/new_radio.dart';
-import 'package:hamlibui/theme/ui_theme.dart';
-import 'package:hamlibui/screens/home_screen.dart';
+import 'package:catweb/screens/main_screen.dart';
+import 'package:catweb/screens/new_radio.dart';
+import 'package:catweb/theme/ui_theme.dart';
+import 'package:catweb/screens/home_screen.dart';
 
 Future<void> main() async {
   await AtEnv.load();
@@ -40,13 +40,13 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp>  {
+class _MyAppState extends State<MyApp> {
   // * load the AtClientPreference in the background
   Future<AtClientPreference> futurePreference = loadAtClientPreference();
   AtClientPreference? atClientPreference;
 
   final AtSignLogger _logger = AtSignLogger(AtEnv.appNamespace);
-  
+
   bool isFirstLoad = false;
   @override
   Widget build(BuildContext context) {
@@ -68,7 +68,3 @@ class _MyAppState extends State<MyApp>  {
     );
   }
 }
-  
-
-
-

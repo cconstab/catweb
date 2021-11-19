@@ -1,11 +1,10 @@
 import 'package:at_client_mobile/at_client_mobile.dart';
 import 'package:at_commons/at_commons.dart';
 
-import 'package:hamlibui/main.dart';
+import 'package:catweb/main.dart';
 
-import 'package:hamlibui/models/radio_model.dart';
-import 'package:hamlibui/models/public_radio_model.dart';
-
+import 'package:catweb/models/radio_model.dart';
+import 'package:catweb/models/public_radio_model.dart';
 
 resetRadioDisplay(HamRadio hamradio) async {
   String? currentAtsign;
@@ -24,14 +23,9 @@ resetRadioDisplay(HamRadio hamradio) async {
 
   atClientManager.atClient.setPreferences(preference);
 
-
-
-
   await Future.delayed(const Duration(seconds: 5));
   hamradio.vfoaFrequency = '0000000000';
   hamradio.vfoaModulationMode = '---';
   hamradio.vfobFrequency = '0000000000';
   hamradio.vfobModulationMode = '---';
-
-
 }

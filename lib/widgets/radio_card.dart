@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:expansion_tile_card/expansion_tile_card.dart';
-import 'package:hamlibui/Theme/ui_theme.dart';
-import 'package:hamlibui/models/radio_model.dart';
-import 'package:hamlibui/services/formats.dart';
-import 'package:hamlibui/services/rigctld.dart';
+import 'package:catweb/Theme/ui_theme.dart';
+import 'package:catweb/models/radio_model.dart';
+import 'package:catweb/services/formats.dart';
+import 'package:catweb/services/rigctld.dart';
 import 'package:timer_builder/timer_builder.dart';
 
 class RadioCard extends StatefulWidget {
@@ -42,7 +42,7 @@ class _RadioCardState extends State<RadioCard> {
       // frequency and modes... If not then set default.
       if (activeradio()) {
         rigCTLd(widget.hamradio);
-      } 
+      }
       return ExpansionTileCard(
           baseColor: UItheme.richBlackFOGRA29,
           expandedColor: UItheme.richBlackFOGRA29,

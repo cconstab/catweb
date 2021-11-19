@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:at_client_mobile/at_client_mobile.dart';
 import 'package:at_commons/at_commons.dart';
-import 'package:hamlibui/models/radio_model.dart';
+import 'package:catweb/models/radio_model.dart';
 
 Future<List<HamRadio>> getHamradio(List<HamRadio> radios) async {
   String? currentAtsign;
@@ -87,7 +87,8 @@ Future<List<HamRadio>> getHamradio(List<HamRadio> radios) async {
         }
       });
 // Lets remove them radios
-      radios.removeWhere((element) => radiosToRemove.contains(element.radioUuid));
+      radios
+          .removeWhere((element) => radiosToRemove.contains(element.radioUuid));
     }
   }
   return (radios);

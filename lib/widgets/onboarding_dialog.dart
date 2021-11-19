@@ -2,12 +2,12 @@ import 'package:at_app_flutter/at_app_flutter.dart';
 import 'package:at_client_mobile/at_client_mobile.dart';
 import 'package:at_onboarding_flutter/screens/onboarding_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:hamlibui/Theme/ui_theme.dart';
+import 'package:catweb/Theme/ui_theme.dart';
 
-import 'package:hamlibui/main.dart';
-import 'package:hamlibui/screens/home_screen.dart';
-import 'package:hamlibui/screens/main_screen.dart';
-import 'package:hamlibui/widgets/error_dialog.dart';
+import 'package:catweb/main.dart';
+import 'package:catweb/screens/home_screen.dart';
+import 'package:catweb/screens/main_screen.dart';
+import 'package:catweb/widgets/error_dialog.dart';
 
 class OnboardingDialog extends StatefulWidget {
   const OnboardingDialog({Key? key}) : super(key: key);

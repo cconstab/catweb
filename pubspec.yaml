@@ -1,4 +1,4 @@
-name: hamlibui
+name: catweb
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -31,8 +31,6 @@ dependencies:
   auto_size_text: ^3.0.0-nullsafety.0
   font_awesome_flutter: ^9.1.0
   mdi: ^5.0.0-nullsafety.0
-  # at_persistence_secondary_server: 3.0.5
-  # at_persistence_spec: 2.0.1
   flutter:
     sdk: flutter
 
@@ -45,19 +43,34 @@ dependencies:
   timer_builder: ^2.0.0
   expansion_tile_card: ^2.0.0
 
+  # desktop - dependencies
+  # file_selector: ^0.8.2+1
+  # file_selector_macos: ^0.0.4+1
+  file_selector_windows: ^0.0.2+1
+  # file_selector_linux: ^0.0.2+1
+
 # For Windowes testing
-  # dependency_overrides:  
+# dependency_overrides:  
 #   at_onboarding_flutter:
 #     git:
 #       url: https://github.com/atsign-foundation/at_widgets.git
 #       path: at_onboarding_flutter
 #       ref: desktop/development
+#   at_backupkey_flutter:
+#     git:
+#       url: https://github.com/atsign-foundation/at_widgets.git
+#       path: at_backupkey_flutter
+#       ref: desktop/development
+#   at_client:
+#     git:
+#       url: https://github.com/atsign-foundation/at_client_sdk.git
+#       path: at_client
+#       ref: desktop-compatible
 #   at_client_mobile:
 #     git:
 #       url: https://github.com/atsign-foundation/at_client_sdk.git
 #       path: at_client_mobile
 #       ref: desktop-compatible
-
 dev_dependencies:
   flutter_test:
     sdk: flutter

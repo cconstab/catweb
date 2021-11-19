@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 
-import 'package:hamlibui/theme/ui_theme.dart';
-import 'package:hamlibui/models/radio_model.dart';
-import 'package:hamlibui/forms/radioforms.dart';
+import 'package:catweb/theme/ui_theme.dart';
+import 'package:catweb/models/radio_model.dart';
+import 'package:catweb/forms/radioforms.dart';
 
 class EditRadio extends StatefulWidget {
-  HamRadio edithamradio;
+  final HamRadio edithamradio;
 
-  EditRadio({Key? key, required this.edithamradio}) : super(key: key);
+  const EditRadio({Key? key, required this.edithamradio}) : super(key: key);
   static const String id = '/editradio';
 
   @override
@@ -85,10 +85,6 @@ class _EditRadioState extends State<EditRadio> {
                       const SizedBox(width: 20),
                     ],
                   )
-                ]
-              )
-            )
-          )
-      );
+                ]))));
   }
 }

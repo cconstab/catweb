@@ -1,10 +1,10 @@
 import 'package:at_commons/at_commons.dart';
 import 'dart:convert';
 
-import 'package:hamlibui/main.dart';
+import 'package:catweb/main.dart';
 import 'package:at_client_mobile/at_client_mobile.dart';
-import 'package:hamlibui/models/radio_model.dart';
-import 'package:hamlibui/models/public_radio_model.dart';
+import 'package:catweb/models/radio_model.dart';
+import 'package:catweb/models/public_radio_model.dart';
 
 updateAtsign(HamRadio hamradio) async {
   String? currentAtsign;

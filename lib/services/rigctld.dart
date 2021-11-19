@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:hamlibui/models/radio_model.dart';
-import 'package:hamlibui/services/update_atsign.dart';
+import 'package:catweb/models/radio_model.dart';
+import 'package:catweb/services/update_atsign.dart';
 
 void rigCTLd(HamRadio hamradio) async {
   String serverResponse = '';
@@ -50,9 +50,10 @@ void rigCTLd(HamRadio hamradio) async {
           hamradio.vfoaModulationModeLast = hamradio.vfoaModulationMode;
           hamradio.vfoaModulationMode = mmode;
         }
-        if (hamradio.vfoaFrequency != hamradio.vfoaFrequencyLast || hamradio.vfoaModulationMode != hamradio.vfoaModulationModeLast ) {
-            updateAtsign(hamradio);
-          }
+        if (hamradio.vfoaFrequency != hamradio.vfoaFrequencyLast ||
+            hamradio.vfoaModulationMode != hamradio.vfoaModulationModeLast) {
+          updateAtsign(hamradio);
+        }
         hamradio.errors = 0;
       },
 

@@ -1,6 +1,6 @@
 import 'dart:html';
 import 'package:flutter/material.dart';
-import 'package:hamlibui/screens/public_radio_screen.dart';
+import 'package:catweb/screens/public_radio_screen.dart';
 
 void getParams() {
   var uri = Uri.dataFromString(window.location.href);

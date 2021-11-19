@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hamlibui/Theme/ui_theme.dart';
+import 'package:catweb/Theme/ui_theme.dart';
 
-import 'package:hamlibui/widgets/onboarding_dialog.dart';
+import 'package:catweb/widgets/onboarding_dialog.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String id = '/home';
@@ -16,8 +16,12 @@ class HomeScreen extends StatelessWidget {
         children: const [
           Text(
             "CATWEB",
-            style:  TextStyle(fontFamily: 'LED', fontSize: 38, letterSpacing: 5, color: UItheme.viridianGreen, fontWeight: FontWeight.bold),
-
+            style: TextStyle(
+                fontFamily: 'LED',
+                fontSize: 38,
+                letterSpacing: 5,
+                color: UItheme.viridianGreen,
+                fontWeight: FontWeight.bold),
           ),
           OnboardingDialog()
         ],
