@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+
 
 import 'package:catweb/theme/ui_theme.dart';
 import 'package:catweb/models/radio_model.dart';
@@ -40,14 +42,25 @@ class _NewRadioState extends State<NewRadio> {
                   Row(
                     children: <Widget>[
                       const SizedBox(width: 20),
+                                             Expanded(
+                        child: BackButton(
+                            color: UItheme.viridianGreen,
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            ),
+                      ),
+                      const Spacer(),
                       RadioSubmitForm(formKey: _formKey),
                       const Spacer(),
                       Expanded(
                         child: MaterialButton(
                           color: UItheme.viridianGreen,
-                          child: const Text(
-                            "Submit",
+                          child:  const AutoSizeText("Submit",
                             style: TextStyle(color: Colors.white),
+                            maxLines: 1,
+                            maxFontSize: 30,
+                            minFontSize: 10,
                           ),
                           onPressed: () {
                             _formKey.currentState!.save();
