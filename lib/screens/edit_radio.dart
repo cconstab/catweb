@@ -85,6 +85,10 @@ class _EditRadioState extends State<EditRadio> {
                       const SizedBox(width: 20),
                     ],
                   )
-                ]))));
+                ]
+              )
+            )
+          )
+        );
   }
 }

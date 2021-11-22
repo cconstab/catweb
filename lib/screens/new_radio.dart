@@ -40,6 +40,15 @@ class _NewRadioState extends State<NewRadio> {
                   Row(
                     children: <Widget>[
                       const SizedBox(width: 20),
+                       Expanded(
+                        child: BackButton(
+                            color: UItheme.viridianGreen,
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            ),
+                      ),
+                      const Spacer(),
                       RadioSubmitForm(formKey: _formKey),
                       const Spacer(),
                       Expanded(
