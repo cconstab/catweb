@@ -75,6 +75,17 @@ dependency_overrides:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  msix: ^2.6.3
+
+msix_config:
+  display_name: CATWEB
+  publisher_display_name: AI6BH
+  identity_name: <>
+  publisher: <>
+  msix_version: 1.0.0.0
+  logo_path: assets\icon\icon.png
+  capabilities: 'internetClient'
+  store: true
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
