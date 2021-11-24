@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 import 'package:catweb/theme/ui_theme.dart';
 
@@ -94,9 +95,12 @@ import 'package:catweb/theme/ui_theme.dart';
             return Expanded(
               child: MaterialButton(
                 color: UItheme.alloyOrange,
-                child: const Text(
-                  "Reset",
+                child: const AutoSizeText(
+                  "Reset",                  
                   style: TextStyle(color: Colors.white),
+                  maxLines: 1,
+                  maxFontSize: 30,
+                  minFontSize: 10,
                 ),
                 onPressed: () {
                   _formKey.currentState!.reset();

@@ -1,4 +1,8 @@
 import 'package:at_app_flutter/at_app_flutter.dart';
+
+import 'package:auto_size_text/auto_size_text.dart';
+
+
 import 'package:at_client_mobile/at_client_mobile.dart';
 import 'package:at_onboarding_flutter/screens/onboarding_widget.dart';
 import 'package:flutter/material.dart';
@@ -70,8 +74,14 @@ class _OnboardingDialogState extends State<OnboardingDialog> {
                   letterSpacing: 5,
                   color: Colors.white),
               items: _atSignsList
-                  .map((atsign) => DropdownMenuItem(
-                      child: Text(atsign.toUpperCase()), value: atsign))
+                  .map((atsign) => DropdownMenuItem(                      
+                      child: SizedBox(
+                        width: 250,
+                        child: AutoSizeText(atsign.toUpperCase(),overflow: TextOverflow.ellipsis,)), 
+                      value: atsign,
+                       )
+                      )
+      
                   .toList(),
               onChanged: (String? value) {
                 if (value != null) {
@@ -81,8 +91,12 @@ class _OnboardingDialogState extends State<OnboardingDialog> {
                 }
               },
             ),
-            const SizedBox(
-              width: 10,
+            Row(
+              children: const [
+                SizedBox(
+                  width: 10,
+                ),
+              ],
             ),
             _onboard(_atsign!, "GO!")
           ],
