@@ -48,10 +48,10 @@ packages:
     description:
       path: at_backupkey_flutter
       ref: "desktop/development"
-      resolved-ref: cd19525faf4ac7981375b2d4240b84248b2c7699
+      resolved-ref: "4a9cfce3313d3524094ebe1f29fff492152af413"
       url: "https://github.com/atsign-foundation/at_widgets.git"
     source: git
-    version: "3.0.0"
+    version: "3.0.1"
   at_base2e15:
     dependency: transitive
     description:
@@ -63,8 +63,8 @@ packages:
     dependency: "direct overridden"
     description:
       path: at_client
-      ref: desktop-compatible
-      resolved-ref: "1327b9734f0d3fc209f1fbd6f7d27d63331b6faa"
+      ref: c1a01a89da97f439843a31655f2e7fdc4444a381
+      resolved-ref: c1a01a89da97f439843a31655f2e7fdc4444a381
       url: "https://github.com/atsign-foundation/at_client_sdk.git"
     source: git
     version: "3.0.5"
@@ -72,8 +72,8 @@ packages:
     dependency: "direct overridden"
     description:
       path: at_client_mobile
-      ref: desktop-compatible
-      resolved-ref: "1327b9734f0d3fc209f1fbd6f7d27d63331b6faa"
+      ref: c1a01a89da97f439843a31655f2e7fdc4444a381
+      resolved-ref: c1a01a89da97f439843a31655f2e7fdc4444a381
       url: "https://github.com/atsign-foundation/at_client_sdk.git"
     source: git
     version: "3.0.3"
@@ -96,10 +96,10 @@ packages:
     description:
       path: at_onboarding_flutter
       ref: "desktop/development"
-      resolved-ref: cd19525faf4ac7981375b2d4240b84248b2c7699
+      resolved-ref: "4a9cfce3313d3524094ebe1f29fff492152af413"
       url: "https://github.com/atsign-foundation/at_widgets.git"
     source: git
-    version: "3.0.2"
+    version: "3.0.4"
   at_persistence_secondary_server:
     dependency: transitive
     description:
@@ -343,13 +343,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.2.0"
-  flutter_keychain:
-    dependency: transitive
-    description:
-      name: flutter_keychain
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.0"
   flutter_launcher_icons:
     dependency: "direct main"
     description:
@@ -733,7 +726,7 @@ packages:
       name: vector_math
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.0"
+    version: "2.1.1"
   webview_flutter:
     dependency: transitive
     description:
