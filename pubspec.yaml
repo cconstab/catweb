@@ -48,6 +48,7 @@ dependencies:
   # file_selector: ^0.8.2+1
   # file_selector_macos: ^0.0.4+1
   file_selector_windows: ^0.0.2+1
+  flutter_dotenv: ^5.0.2
   # file_selector_linux: ^0.0.2+1
 
 # For Windowes testing
@@ -102,6 +103,8 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+  - .env
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
