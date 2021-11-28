@@ -3,7 +3,7 @@ import 'package:at_onboarding_flutter/at_onboarding_flutter.dart'
 import 'package:flutter_dotenv/flutter_dotenv.dart' show dotenv;
 
 /// AtEnv is a helper class to load in the environment variables from the .env file
-class AtEnv {
+class MyAtEnv {
   /// Load the environment variables from the .env file.
   /// Directly calls load from the dotenv package.
   static Future<void> load() => dotenv.load();
