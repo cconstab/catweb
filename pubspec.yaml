@@ -52,17 +52,17 @@ dependencies:
   # file_selector_linux: ^0.0.2+1
 
 # For Windowes testing
-# dependency_overrides:  
-#   at_onboarding_flutter:
-#     git:
-#       url: https://github.com/atsign-foundation/at_widgets.git
-#       path: at_onboarding_flutter
-#       ref: desktop/development
-#   at_backupkey_flutter:
-#     git:
-#       url: https://github.com/atsign-foundation/at_widgets.git
-#       path: at_backupkey_flutter
-#       ref: desktop/development
+dependency_overrides:  
+  at_onboarding_flutter:
+    git:
+      url: https://github.com/atsign-foundation/at_widgets.git
+      path: at_onboarding_flutter
+      ref: add-platforms
+  at_backupkey_flutter:
+    git:
+      url: https://github.com/atsign-foundation/at_widgets.git
+      path: at_backupkey_flutter
+      ref: add-platforms
 #   at_client:
 #     git:
 #       url: https://github.com/atsign-foundation/at_client_sdk.git

@@ -37,11 +37,13 @@ packages:
     source: hosted
     version: "3.0.0"
   at_backupkey_flutter:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: at_backupkey_flutter
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: at_backupkey_flutter
+      ref: add-platforms
+      resolved-ref: "579ac04b3aa3725e44a643c459f71b8f985435c2"
+      url: "https://github.com/atsign-foundation/at_widgets.git"
+    source: git
     version: "3.0.1"
   at_base2e15:
     dependency: transitive
@@ -79,11 +81,13 @@ packages:
     source: hosted
     version: "3.0.4"
   at_onboarding_flutter:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: at_onboarding_flutter
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: at_onboarding_flutter
+      ref: add-platforms
+      resolved-ref: "579ac04b3aa3725e44a643c459f71b8f985435c2"
+      url: "https://github.com/atsign-foundation/at_widgets.git"
+    source: git
     version: "3.0.4"
   at_persistence_secondary_server:
     dependency: transitive
@@ -183,6 +187,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.2"
+  cross_file:
+    dependency: transitive
+    description:
+      name: cross_file
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.2"
   crypto:
     dependency: transitive
     description:
@@ -246,6 +257,48 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.6"
+  file_saver:
+    dependency: transitive
+    description:
+      name: file_saver
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.10"
+  file_selector:
+    dependency: transitive
+    description:
+      name: file_selector
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.8.2+1"
+  file_selector_linux:
+    dependency: transitive
+    description:
+      name: file_selector_linux
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.2+1"
+  file_selector_macos:
+    dependency: transitive
+    description:
+      name: file_selector_macos
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.4+1"
+  file_selector_platform_interface:
+    dependency: transitive
+    description:
+      name: file_selector_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.2"
+  file_selector_web:
+    dependency: transitive
+    description:
+      name: file_selector_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.8.1+2"
   file_selector_windows:
     dependency: "direct main"
     description:
@@ -253,6 +306,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.2+1"
+  fixnum:
+    dependency: transitive
+    description:
+      name: fixnum
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -740,6 +800,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.1.0"
+  zxing2:
+    dependency: transitive
+    description:
+      name: zxing2
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.0"
 sdks:
   dart: ">=2.14.0 <3.0.0"
   flutter: ">=2.5.0"
