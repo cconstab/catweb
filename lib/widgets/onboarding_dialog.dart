@@ -7,7 +7,7 @@ import 'package:at_client_mobile/at_client_mobile.dart';
 import 'package:at_onboarding_flutter/screens/onboarding_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:catweb/Theme/ui_theme.dart';
-
+import 'package:catweb/services/at_env.dart' show MyAtEnv;
 import 'package:catweb/main.dart';
 import 'package:catweb/screens/home_screen.dart';
 import 'package:catweb/screens/main_screen.dart';
@@ -126,9 +126,9 @@ class _OnboardingDialogState extends State<OnboardingDialog> {
           atsign: atSign,
           context: context,
           atClientPreference: preference,
-          domain: AtEnv.rootDomain,
-          rootEnvironment: AtEnv.rootEnvironment,
-          appAPIKey: AtEnv.appApiKey,
+          domain: MyAtEnv.rootDomain,
+          rootEnvironment: MyAtEnv.rootEnvironment,
+          appAPIKey: MyAtEnv.appApiKey,
           onboard: (value, atsign) {
             if ((atsign != null) && !(_atSignsList.contains(atsign))) {
               setState(() {
