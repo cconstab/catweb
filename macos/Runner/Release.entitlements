@@ -32,5 +32,9 @@
 	<true/>
 	<key>com.apple.security.print</key>
 	<true/>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>$(AppIdentifierPrefix)com.ai6bh.catweb</string>
+	</array>
 </dict>
 </plist>
