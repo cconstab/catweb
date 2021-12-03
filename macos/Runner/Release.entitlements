@@ -12,7 +12,5 @@
 	<array>
 		<string>$(AppIdentifierPrefix)com.ai6bh.catweb</string>
 	</array>
-        <key>com.apple.security.files.downloads.read-write</key>
-        <true/>
 </dict>
 </plist>
