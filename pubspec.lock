@@ -41,10 +41,10 @@ packages:
     description:
       path: at_backupkey_flutter
       ref: add-platforms
-      resolved-ref: "579ac04b3aa3725e44a643c459f71b8f985435c2"
+      resolved-ref: "45fae1bd8691e9d31c5d8020bcbd750ed13772c8"
       url: "https://github.com/atsign-foundation/at_widgets.git"
     source: git
-    version: "3.0.1"
+    version: "3.1.0"
   at_base2e15:
     dependency: transitive
     description:
@@ -85,10 +85,10 @@ packages:
     description:
       path: at_onboarding_flutter
       ref: add-platforms
-      resolved-ref: "579ac04b3aa3725e44a643c459f71b8f985435c2"
+      resolved-ref: "45fae1bd8691e9d31c5d8020bcbd750ed13772c8"
       url: "https://github.com/atsign-foundation/at_widgets.git"
     source: git
-    version: "3.0.4"
+    version: "3.1.0"
   at_persistence_secondary_server:
     dependency: transitive
     description:
@@ -606,13 +606,48 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.4"
-  share:
+  share_plus:
     dependency: transitive
     description:
-      name: share
+      name: share_plus
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.4"
+  share_plus_linux:
+    dependency: transitive
+    description:
+      name: share_plus_linux
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.4"
+  share_plus_macos:
+    dependency: transitive
+    description:
+      name: share_plus_macos
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.2"
+  share_plus_platform_interface:
+    dependency: transitive
+    description:
+      name: share_plus_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.1"
+  share_plus_web:
+    dependency: transitive
+    description:
+      name: share_plus_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.4"
+  share_plus_windows:
+    dependency: transitive
+    description:
+      name: share_plus_windows
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.3"
   sky_engine:
     dependency: transitive
     description: flutter
