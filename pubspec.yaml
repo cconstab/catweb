@@ -55,22 +55,21 @@ dependency_overrides:
     git:
       url: https://github.com/atsign-foundation/at_widgets.git
       path: at_onboarding_flutter
-      ref: desktop/development
+      ref: add-platforms
   at_backupkey_flutter:
     git:
       url: https://github.com/atsign-foundation/at_widgets.git
       path: at_backupkey_flutter
-      ref: desktop/development
-  at_client:
-    git:
-      url: https://github.com/atsign-foundation/at_client_sdk.git
-      path: at_client
-      ref: c1a01a89da97f439843a31655f2e7fdc4444a381
-  at_client_mobile:
-    git:
-      url: https://github.com/atsign-foundation/at_client_sdk.git
-      path: at_client_mobile
-      ref: c1a01a89da97f439843a31655f2e7fdc4444a381
+      ref: add-platforms
+  #   git:
+  #     url: https://github.com/atsign-foundation/at_client_sdk.git
+  #     path: at_client
+  #     ref: c1a01a89da97f439843a31655f2e7fdc4444a381
+  # at_client_mobile:
+  #   git:
+  #     url: https://github.com/atsign-foundation/at_client_sdk.git
+  #     path: at_client_mobile
+  #     ref: c1a01a89da97f439843a31655f2e7fdc4444a381
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -79,9 +78,9 @@ dev_dependencies:
 msix_config:
   display_name: CATWEB
   publisher_display_name: AI6BH
-  identity_name: <>
-  publisher: <>
-  msix_version: 1.0.1.0
+  identity_name: <>AI6BH.CATWEB
+  publisher: CN=<>
+  msix_version: 1.0.2.0
   logo_path: assets\icon\icon.png
   capabilities: 'internetClient'
   store: true
