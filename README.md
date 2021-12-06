@@ -11,6 +11,9 @@ Screenshot of IC-7100 and the website showing listening at 7.185Mhz LSB
 
 ![IMG_20210903_142218](https://user-images.githubusercontent.com/6131216/132066553-28544268-82c9-4ed9-ac91-151c71cc1070.jpg)
 
+## Issues
+If you hit any issues with the application then please just rasie and issue ticket [here](https://github.com/cconstab/catweb/issues) with as much detail as possible.
+
 ## Full Disclosure
 I am part of the founding team of the wavi.ng website and the opensoure project that provides the underlying technology.
 - [@Foundation](https://github.com/atsign-foundation) Open Source Project
