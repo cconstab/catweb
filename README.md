@@ -1,18 +1,19 @@
 # CATWEB
- ## Project Aim
+
+## Project Aim
 
  To provide near real-time frequency and modulation mode being used to a website, so other operators know where you are listening.
   No firewall ports should need to be opened, all data across Internet should be encrypted.
   An example site can be seen here [AI6BH](https://wavi.ng/@AI6BH). If I am not listening you will not see the listening sections as the entries time out after an hour of no activity.
- 
+## Issues
+If you hit any issues with the application then please just rasie and issue ticket [here](https://github.com/cconstab/catweb/issues) with as much detail as possible.
+
 ![image](https://user-images.githubusercontent.com/6131216/143327480-275d1d74-9e31-40f9-92e6-85d7f4202304.png)
 
 Screenshot of IC-7100 and the website showing listening at 7.185Mhz LSB
 
 ![IMG_20210903_142218](https://user-images.githubusercontent.com/6131216/132066553-28544268-82c9-4ed9-ac91-151c71cc1070.jpg)
 
-## Issues
-If you hit any issues with the application then please just rasie and issue ticket [here](https://github.com/cconstab/catweb/issues) with as much detail as possible.
 
 ## Full Disclosure
 I am part of the founding team of the wavi.ng website and the opensoure project that provides the underlying technology.
