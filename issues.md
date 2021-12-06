@@ -1,5 +1,5 @@
-## Issues
-If you hit any issues with the application then please just rasie and issue ticket [here](https://github.com/cconstab/catweb/issues) with as much detail as possible.
+## [Issues](https://github.com/cconstab/catweb/issues)
+If you hit any issues with the application then please just raise an [issue](https://github.com/cconstab/catweb/issues) with as much detail as possible.
 
 ## [CATWEB](https://github.com/cconstab/catweb#readme)
 CATWEB is an open source project, we welcome PR's and issues to improve the software!
