@@ -5,8 +5,6 @@
  To provide near real-time frequency and modulation mode being used to a website, so other operators know where you are listening.
   No firewall ports should need to be opened, all data across Internet should be encrypted.
   An example site can be seen here [AI6BH](https://wavi.ng/@AI6BH). If I am not listening you will not see the listening sections as the entries time out after an hour of no activity.
-## Issues
-If you hit any issues with the application then please just rasie and issue ticket [here](https://github.com/cconstab/catweb/issues) with as much detail as possible.
 
 ![image](https://user-images.githubusercontent.com/6131216/143327480-275d1d74-9e31-40f9-92e6-85d7f4202304.png)
 
