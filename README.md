@@ -24,6 +24,7 @@ I am part of the founding team of the wavi.ng website and the opensoure project 
 
 TLDR;
  This appication connects to your HamRadio's CAT port via `rigctld` and publishes the Frequency and Modulation mode to your [@wavi](https://wavi.ng) page. Both this app and @wavi require you to have an @sign, which is a new Internet identity which you can own and allow others access to your data. If you would like your Callsign as your @sign then visit [atsign.com](https://atsign.com) to buy it or see if there are any offers for Hams (I am working on it for you!)
+ If you do not have a HAM radio you can still run and contribute to the project as rigctld can be run in dummy mode. For example `rigctld -v -t 5000` will simulate a radio and listen on port 5000.
 
  ## More details  
 
