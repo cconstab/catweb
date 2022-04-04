@@ -39,30 +39,31 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  at_app_flutter: 3.0.0
+  at_app_flutter: ^3.0.0
   flutter_form_builder: ^6.0.0
   timer_builder: ^2.0.0
   expansion_tile_card: ^2.0.0
+  at_client: ^3.0.13
 
   # desktop - dependencies
   # file_selector: ^0.8.2+1
   # file_selector_macos: ^0.0.4+1
-  file_selector_windows: ^0.0.2+1
+  #file_selector_windows: ^0.0.2+1
   flutter_dotenv: ^5.0.2
   # file_selector_linux: ^0.0.2+1
 
-# For Windowes testing
-dependency_overrides:  
-  at_onboarding_flutter:
-    git:
-      url: https://github.com/atsign-foundation/at_widgets.git
-      path: at_onboarding_flutter
-      ref: add-platforms
-  at_backupkey_flutter:
-    git:
-      url: https://github.com/atsign-foundation/at_widgets.git
-      path: at_backupkey_flutter
-      ref: add-platforms
+# # For Windowes testing
+# dependency_overrides:  
+#   at_onboarding_flutter:
+#     git:
+#       url: https://github.com/atsign-foundation/at_widgets.git
+#       path: at_onboarding_flutter
+#       ref: add-platforms
+#   at_backupkey_flutter:
+#     git:
+#       url: https://github.com/atsign-foundation/at_widgets.git
+#       path: at_backupkey_flutter
+#       ref: add-platforms
 #   at_client:
 #     git:
 #       url: https://github.com/atsign-foundation/at_client_sdk.git

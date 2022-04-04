@@ -134,6 +134,7 @@ qrtAtsign(HamRadio hamradio) async {
     ..isPublic = true
     ..isEncrypted = false
     ..namespaceAware = true
+    // ..ttb = 
     // // one minute
     // ..ttl = 60000 ;
     // One Hour
