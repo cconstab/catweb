@@ -76,7 +76,7 @@ updateAtsign(HamRadio hamradio) async {
     ..sharedWith = null
     ..metadata = metaData;
 
-  String wavikey = 'custom_' + hamradio.radioName + '.wavi';
+  String wavikey = 'custom_' + hamradio.radioName ;
 
   metaData = Metadata()
     ..isPublic = true
@@ -89,7 +89,7 @@ updateAtsign(HamRadio hamradio) async {
   key = AtKey()
     ..key = wavikey
     ..sharedBy = currentAtsign
-    // ..namespace = 'wavi'
+     ..namespace = 'wavi'
     ..metadata = metaData;
 
   print('+++++++++++++++++++++++++++++++');
